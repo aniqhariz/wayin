@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "mapbox-gl/dist/mapbox-gl.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+}
+
+/* Full-height layout reset for map pages */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Ensure Mapbox markers are always visible */
+.mapboxgl-marker {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Mapbox canvas fills container */
+.mapboxgl-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Remove default Mapbox logo bottom offset */
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  z-index: 10;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
